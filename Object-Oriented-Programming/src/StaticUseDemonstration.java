@@ -1,27 +1,27 @@
 public class StaticUseDemonstration {
 public static void main(String[] args) {
-    students arka=new students("Arka Banerjee", 15, 19);
+    Students arka=new Students("Arka Banerjee", 15, 19);
 
-    // System.out.println(arka.name+" studying at "+ students.clg);
+    // System.out.println(arka.name+" studying at "+ Students.clg);
     // System.out.println("his age is "+arka.age+" and rollnumber "+arka.rollNo);
     arka.display();
     // we can also change the value of static variable 
-    students.clg="IIT-KGP";
+    Students.clg="IIT-KGP";
     System.out.println("after collage change");
     arka.display();
 
     System.out.print(arka.name+"'s branch : ");
-    students.displayCollageAndBranch();
+    Students.displayCollegeAndBranch();
 
     // change done prior will reflect since now on for all objects 
 
     // we can see that for another object also the static fields will have same data 
-     students oishee=new students("Oishee Banerjee", 05, 20);
+     Students oishee=new Students("Oishee Banerjee", 05, 20);
       oishee.display();
       System.out.print(oishee.name+"'s branch : ");
-      students.displayCollageAndBranch();}
+      Students.displayCollegeAndBranch();}
 }
-class students{
+class Students{
     // instance variables 
     String name;
     int rollNo;
@@ -43,14 +43,14 @@ static {
 // hence here in the static block the value of static 
 // variable is initialized for all the objects of the class
 
-public students(String name, int rollNo, int age) {
+public Students(String name, int rollNo, int age) {
     this.name = name;
     this.rollNo = rollNo;
     this.age = age;
 }
 void display(){
     //non-static methods can access static variable via class name 
-    System.out.println(name+" studying at "+ students.clg);
+    System.out.println(name+" studying at "+ Students.clg);
     System.out.println("his/her age is "+age+" and rollnumber "+rollNo);
 }
 /*  functions can also be static 
@@ -64,7 +64,7 @@ static String concatClgAndBranch(){
 
 }
 /* A static method can only call another static method Directly ---shown  */ 
-static void displayCollageAndBranch (){
+static void displayCollegeAndBranch (){
     System.out.println(concatClgAndBranch()+'\n');
  /*   internally calls static method concatClgAndBranch 
 if we try to call a non static method display
