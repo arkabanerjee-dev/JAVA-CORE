@@ -8,11 +8,11 @@ import collage.*;
 public class packageSystemCheckAccess {
 public static void main(String[] args) {
     student s1 = new student();
-    // lest keep student of collage package and teachher of School package.
+    // lets keep student of collage package and teachher of School package.
     School.teacher t1 = new School.teacher();
     // s1.role(); 
     // the above statement will be giving error 
-    // /beacuse the method role() is not private 
+    // beacuse the method role() is not private 
     // default access modifier only allow access in  same package .
 s1.role();
 t1.role();
