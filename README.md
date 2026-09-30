@@ -15,16 +15,7 @@ I'm currently working through Core Java topics and building a strong foundation 
 - Abstraction
 - Interfaces
 - Exception Handling
-- Collections
-- Generics
-- Lambda Expressions
-- Stream API
-- Multithreading
-- File Handling
-- JDBC
-- Networking
-- Other Core Java concepts
-
+- packages 
 ## Repository Structure
 
 ```text
